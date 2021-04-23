@@ -2,7 +2,7 @@ HTML + CSS + JavaScript + EJS + Node.js + Express
 
 1- Use the Hyperterminal to enter the server by:
 
-**NOTE: Don't do the bellow step if you have installed nodemon before**
+**NOTE: don't do the first bulleted step if you have installed nodemon before**
 
 - Installing nodemon by typing `npm install -g nodemon` (Wherever you want^^)
 
