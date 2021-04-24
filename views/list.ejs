@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+    <%- include("header"); -%>
 
-  <head>
-    <meta charset="utf-8">
-    <title>✔ To Do List</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-
-  <body>
     <div class="box" id="heading">
-      <h1><%=ejsDate%></h1>
+      <h1><%=ejsList%></h1>
     </div>
-
-    <form class="box" action="/" method="post">
+    <div class="box">
       <% for(var i = 0; i < ejsItems.length ; i++) { %>
       <div class="item">
         <input type="checkbox">
         <p><%= ejsItems[i] %></p>
       </div>
       <%    } %>
-      <footer>
 
+      <form class="item" action="/" method="post">
         <input type="text" name="addItem" placeholder="Add an Item" autocomplete="off">
-        <button type="submit" name="button">+</button>
-      </footer>
-    </form>
-
-  </body>
-
-</html>
+        <button type="submit" name="button" value="<%=ejsList%>">+</button>
+      </form>
+    </div>
+    <%- include("footer"); -%>

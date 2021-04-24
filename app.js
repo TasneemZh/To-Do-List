@@ -1,8 +1,11 @@
 const express = require("express");
 const ejs = require("ejs");
+const date = require(__dirname + "/date.js");
+
 const app = express();
 
-var items = ["Buy Food", "Cook Food", "Eat Food"];
+const items = ["Buy Food", "Cook Food", "Eat Food"];
+const workItems = [];
 
 app.set("view engine", "ejs");
 
@@ -13,23 +16,34 @@ app.use(express.urlencoded({
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  var myDate = new Date();
-  var options = {
-    weekday: "long",
-    month: "long",
-    day: "numeric"
-  };
 
   res.render("list", {
-    ejsDate: myDate.toLocaleString("en-US", options),
+    ejsList: date.getDate(),
     ejsItems: items
   });
 });
 
+app.get("/work", function(req, res) {
+  res.render("list", {
+    ejsList: "Work List",
+    ejsItems: workItems
+  });
+});
+
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
 app.post("/", function(req, res) {
-  var item = req.body.addItem;
-  items.push(item);
-  res.redirect("/");
+  const item = req.body.addItem;
+
+  if (req.body.button === "Work List") {
+    workItems.push(item);
+    res.redirect("/work");
+  } else {
+    items.push(item);
+    res.redirect("/");
+  }
 });
 
 app.listen(3000, function() {
