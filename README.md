@@ -10,4 +10,4 @@ NOTE: **don't do the first bulleted step if you have installed nodemon before**
 
 - Typing `nodemon` or `nodemon app.js`
 
-2 - Enter the url: "localhost:3000/"
+2 - Enter the url: "localhost:3000/" and "localhost:3000/[any parameter]"
