@@ -1,4 +1,4 @@
-HTML + CSS + JavaScript + EJS + Node.js + Express
+HTML + CSS + JavaScript + EJS + Node.js + Express + MongoDB
 
 1- Use the HyperTerminal to enter the server by:
 
