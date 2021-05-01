@@ -6,9 +6,7 @@ NOTE: **don't do the first bulleted step if you have installed nodemon before**
 
 - Installing nodemon by typing `npm install -g nodemon` (Wherever you want^^)
 
-- Typing `mongod` in a seperate tab on the terminal
-
-- **(Optional)** Typing `mongo` in another seperate tab to interact with the database itself
+- **(Optional)** Typing `mongo` in another separate tab to interact with the database itself
 
 - Moving to the directory where you cloned the project (Use cd)
 
